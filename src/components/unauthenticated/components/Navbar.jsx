@@ -9,12 +9,13 @@ function Navbar() {
   return (
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex p-2 lg:p-5 items-center justify-between">
-        <Link
-          to="/home"
-          className="title-font inline-flex justify-center font-medium items-center text-gray-900"
-        >
-          <img src={AppLogoUrl} alt="NewsKaro" className="w-auto h-6 lg:h-10" />
-          <span className="ml-3 text-base lg:text-xl">{AppName}</span>
+      <Link to="" className="flex items-center">
+          <img
+            src={AppLogoUrl}
+            alt="SanTech API"
+            className="lg:h-10 h-6 w-auto mr-2"
+          />
+          <span className="text-white text-2xl font-bold">{AppName}</span>
         </Link>
 
         {!user ? (

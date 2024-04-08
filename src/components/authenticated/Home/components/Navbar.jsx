@@ -18,7 +18,7 @@ function Navbar() {
           <img
             src={AppLogoUrl}
             alt="SanTech API"
-            className="h-10 w-auto mr-2"
+            className="lg:h-10 h-6 w-auto mr-2"
           />
           <span className="text-white text-2xl font-bold">{AppName}</span>
         </Link>

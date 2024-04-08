@@ -74,21 +74,7 @@ function Profile() {
     setSelectedCategories(updatedCategories);
   };
 
-  // const handleToggleCategory = (category) => {
-  //   const updatedCategories = new Set(selectedCategories);
 
-  //   if (updatedCategories.has(category)) {
-  //     updatedCategories.delete(category);
-  //   } else {
-  //     if (userCategories.includes(category)) {
-  //       updatedCategories.delete(category);
-  //     } else {
-  //       updatedCategories.add(category);
-  //     }
-  //   }
-
-  //   setSelectedCategories(updatedCategories);
-  // };
 
   const handleRemoveCategory = async (category) => {
     const updatedCategories = userCategories.filter((cat) => cat !== category);
@@ -108,7 +94,7 @@ function Profile() {
         <div className="relative flex justify-center min-h-[200px] md:min-h-[250px] md:h-[250px] bg-cover rounded-xl">
           <img src={profile_banner} className="absolute h-full w-full object-cover rounded-xl brightness-75 bg-gray-300" alt="" />
           <div className="absolute -bottom-12 md:-bottom-13 md:left-5 flex items-center justify-center h-24 w-24 rounded-full border-4 border-white bg-blue-500">
-            <h1 className="text-5xl -mt-5 md:text-7xl text-white">{user.email && user.email.slice(0, 1)}</h1>
+            <h1 className=" -mt-5 text-7xl text-white">{user.email && user.email.slice(0, 1)}</h1>
           </div>
         </div>
 
