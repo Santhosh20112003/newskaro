@@ -3,29 +3,33 @@ import { Link } from "react-router-dom";
 import { News_alt_img } from "../../../common/links";
 import { ParseDate } from "../../../common/methods";
 
-const TopHeadlinesCard = ({ article , index }) => {
-  const { url, urlToImage, title, source, publishedAt, description,author } = article;
-
+const TopHeadlinesCard = ({ article, index }) => {
   return (
-    <Link to={url} key={index} className="block w-full p-3">
+    <Link to={article.link} key={index} className="block w-full p-3">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-        {urlToImage && (
+        {article.og && (
           <img
-            src={urlToImage || `${News_alt_img}?`}
-            alt={title}
+            src={article.og || `${News_alt_img}?`}
+            alt={article.title}
             loading="lazy"
             className="w-full h-40 object-cover"
           />
         )}
         <div className="p-4">
-          <h2 className="text-lg font-semibold mb-2">{title}</h2>
+          <span className="inline-flex items-center gap-3">
+            <img
+              src={article.source_icon}
+              alt={article.title}
+              className="w-5 h-5 rounded-full"
+            />
+            <h2 className="text-lg font-semibold ">{article.source}</h2>
+          </span>
           <p className="text-sm text-gray-600 mb-2">
-            <strong>{author || source.name }</strong> - {ParseDate(publishedAt)}
+            <strong>{article.title}</strong>
           </p>
-          <p className="text-sm text-gray-700 line-clamp-3">{description}</p>
           <div className="mt-4">
             <Link
-              to={url}
+              to={article.link}
               className="text-emerald-500 hover:underline"
             >
               Read more

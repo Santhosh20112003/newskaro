@@ -12,11 +12,11 @@ const NewsFeeds = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(
-        `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=3bfb0185171849269bf6697d52ecad67`
-      )
+      .get(`https://ok.surf/api/v1/cors/news-feed`,{
+        headers: { accept: "application/json" },
+      })
       .then((result) => {
-        setNews(result.data.articles);
+        setNews(result.data.Business);
         setLoading(false);
       })
       .catch((err) => {
@@ -51,18 +51,18 @@ const NewsFeeds = () => {
           <div className="flex items-center justify-center">
             <div className="w-full md:w-5/6 grid grid-cols-1 md:grid-cols-3 gap-6">
               {news.slice(0, 6).map((api) => (
-                <Link to={api.url} key={api.title} className="p-4 shadow-lg bg-gray-50 rounded-lg">
+                <Link to={api.link} key={api.title} className="p-4 shadow-lg bg-gray-50 rounded-lg">
                   <div className="h-full flex flex-col items-center text-center">
                     <img
                       alt={api.title}
                       className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                      src={api.urlToImage}
+                      src={api.og}
                     />
                     <div className="w-full">
                       <h2 className="title-font font-semibold text-lg text-gray-900">
-                        {api.title} API
+                        {api.source}
                       </h2>
-                      <p className="mb-4">{api.description}</p>
+                      <p className="mb-4">{api.title}</p>
                     </div>
                   </div>
                 </Link>
