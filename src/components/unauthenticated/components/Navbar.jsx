@@ -13,8 +13,8 @@ function Navbar() {
           to="/home"
           className="title-font inline-flex justify-center font-medium items-center text-gray-900"
         >
-          <img src={AppLogoUrl} alt="NewsKaro" className="w-auto h-8 lg:h-10" />
-          <span className="ml-3 text-lg lg:text-xl">{AppName}</span>
+          <img src={AppLogoUrl} alt="NewsKaro" className="w-auto h-6 lg:h-10" />
+          <span className="ml-3 text-base lg:text-xl">{AppName}</span>
         </Link>
 
         {!user ? (

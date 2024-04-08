@@ -26,7 +26,7 @@ function TrendingSources() {
   }, []);
 
   return (
-    <div className="w-full lg:block lg:w-1/2 xl:w-1/3 p-4">
+    <div className="w-full lg:block hidden lg:w-1/2 xl:w-1/3 p-4">
       <div className="bg-white rounded-lg shadow-md mt-3">
         <div className="p-4">
           <h1 className="text-lg lg:text-2xl text-gray-600 font-bold mb-2">
