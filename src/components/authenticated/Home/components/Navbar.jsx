@@ -14,13 +14,13 @@ function Navbar() {
   return (
     <nav className="bg-emerald-300 shadow-xl">
       <div className="mx-auto px-4 py-5 sm:px-6 lg:px-10 flex justify-between items-center">
-        <Link to="" className="flex items-center">
+      <Link to="" className="flex items-center">
           <img
             src={AppLogoUrl}
             alt="SanTech API"
-            className="lg:h-10 h-6 w-auto mr-2"
+            className="lg:h-10 h-8 w-auto mr-2"
           />
-          <span className="text-white text-2xl font-bold">{AppName}</span>
+          <span className="text-gray-300 hidden md:block text-2xl font-bold">{AppName}</span>
         </Link>
         <div className="flex items-center ml-3 relative">
           <div
