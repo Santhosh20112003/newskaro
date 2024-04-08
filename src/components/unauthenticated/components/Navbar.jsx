@@ -15,7 +15,7 @@ function Navbar() {
             alt="SanTech API"
             className="lg:h-10 h-8 w-auto mr-2"
           />
-          <span className="text-gray-300 hidden md:block text-2xl font-bold">{AppName}</span>
+          <span className="text-gray-500 hidden md:block text-2xl font-bold">{AppName}</span>
         </Link>
 
         {!user ? (
