@@ -8,14 +8,14 @@ function Navbar() {
 
   return (
     <header className="text-gray-600 body-font">
-      <div className="container mx-auto flex p-2 lg:p-5 items-center justify-between">
+      <div className="container mx-auto flex px-3 lg:p-5 items-center justify-between">
       <Link to="" className="flex items-center">
           <img
             src={AppLogoUrl}
             alt="SanTech API"
-            className="lg:h-10 h-6 w-auto mr-2"
+            className="lg:h-10 h-8 w-auto mr-2"
           />
-          <span className="text-white text-2xl font-bold">{AppName}</span>
+          <span className="text-gray-300 hidden md:block text-2xl font-bold">{AppName}</span>
         </Link>
 
         {!user ? (
